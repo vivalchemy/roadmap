@@ -1,0 +1,12 @@
+name: Example1
+topics:
+  - name: Topic1
+    subtopics:
+      - Subtopic 1
+      - Subtopic 2
+      - Subtopic 3
+  - name: Another Topic 
+    subtopics:
+      - Subtopic 1
+      - Subtopic 2
+      - Subtopic 3
