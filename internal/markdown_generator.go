@@ -48,8 +48,13 @@ func GenerateSubjectMarkdown(subject Subject, subjectDir string) {
 		writeTopicHeader(subjectREADME, topic.Name)
 
 		for _, subtopic := range topic.Subtopics {
+			fmt.Fprintf(
+				subjectREADME, "- [ ] [[%s/%s/%s | %s]]\n",
+				strings.ReplaceAll(subject.Name, " ", "-"),
+				strings.ReplaceAll(topic.Name, " ", "-"),
+				strings.ReplaceAll(subtopic, " ", "_"),
+				subtopic)
 			createSubtopicMarkdown(topicDir, subtopic)
-			fmt.Fprintf(subjectREADME, "- [ ] [[%s/%s]]\n", topicDir, strings.ReplaceAll(subtopic, " ", "_"))
 		}
 		fmt.Fprintln(subjectREADME)
 	}
@@ -68,10 +73,7 @@ func createTopicDirectory(subjectDir string, topicName string) string {
 }
 
 func writeTopicHeader(file *os.File, topicName string) {
-	fmt.Fprintln(file, "##", topicName)
-	fmt.Fprintln(file)
-	fmt.Fprintln(file, "Intro to topic")
-	fmt.Fprintln(file)
+	fmt.Fprintln(file, "##", topicName, "\n---\n\n")
 }
 
 func createSubtopicMarkdown(topicDir string, subtopic string) {
@@ -84,5 +86,6 @@ func createSubtopicMarkdown(topicDir string, subtopic string) {
 	}
 	defer subtopicREADME.Close()
 
-	fmt.Fprintf(subtopicREADME, "# %s\n This is a file for subtopic %s", subtopic, subtopic)
+	fmt.Fprintf(subtopicREADME, "# %s\n---\n\n", subtopic)
+	GenerateVideoMarkdown(subtopicREADME, subtopic)
 }
