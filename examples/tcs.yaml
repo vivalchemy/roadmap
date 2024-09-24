@@ -1,0 +1,28 @@
+name: Theoritical Computer Science
+topics:
+  - name: Regular Expression (RE)
+    subtopics:
+      - Equivalence of RE and FA
+      - Arden's Theorem
+      - RE Applications
+      - Regular Language (RL)
+      - Closure properties of RLs
+      - Decision properties of RLs
+      - Pumping lemma for RLs
+  - name: Grammars
+    subtopics:
+      - Grammars and Chomsky hierarchy
+      - Regular Grammar (RG)
+      - Equivalence of Left and Right linear grammar
+      - Equivalence of RG and FA
+      - Context Free Grammars (CFG)
+      - Definition
+      - Sentential forms
+      - Leftmost and Rightmost derivations
+      - Parse tree
+      - Ambiguity
+      - Simplification and Applications
+      - Normal Forms - Chomsky Normal Forms (CNF)
+      - Greibach Normal Forms (GNF)
+      - Context Free language (CFL) - Pumping lemma
+      - Closure properties
