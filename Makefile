@@ -1,23 +1,14 @@
 # Change these variables as necessary.
 main_package_path = ./main.go
 binary_name = roadmap
-default_argument = ./examples/example_1.yaml
+default_argument = ./examples/tcs.yaml
 A=${default_argument}
-
-# ==================================================================================== #
-# DEFAULT TASKS
-# ==================================================================================== #
-
-# all: run all necessary tasks
-.PHONY: all
-all: tidy run
-
 
 # ==================================================================================== #
 # HELPERS
 # ==================================================================================== #
 
-## help: print this help message
+## help: print this help message (DEFAULT)
 .PHONY: help
 help:
 	@echo -e "Make commands for ${binary_name}\n"

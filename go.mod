@@ -3,6 +3,7 @@ module github.com/vivalchemy/roadmap
 go 1.23.1
 
 require (
+	github.com/anaskhan96/soup v1.2.5
 	github.com/google/generative-ai-go v0.18.0
 	github.com/joho/godotenv v1.5.1
 	google.golang.org/api v0.198.0
